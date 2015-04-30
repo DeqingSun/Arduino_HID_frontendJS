@@ -21,6 +21,39 @@ You can either follow [NicoHood's tutorial](http://github.com/NicoHood/HID/wiki)
 
 ###Write your own code
 
+Make sure you followed the [install guide](https://github.com/NicoHood/HID/wiki/Installation) and put HID in hardware folder of your sketch book.
+
+Make sure you chose "Arduino Leonardo HID-Project" in Board:
+![Arduino Leonardo HID-Project](tutorial/HID_library_board.png)
+
+And "Serial + Gamepad HID" in USB Core:
+![Serial + Gamepad HID](tutorial/HID_library_core.png)
+
+Then you can open "sketch_forward_input_JS_gamepad/sketch_forward_input_JS_gamepad.ino" in this repo and upload it to your Leonardo. Also you can modify the code to add your own feature.
+
 ###Upload hex file directly
+
+If you want to skip installing the library and only want to try it. There is a sketch_forward_input_JS_gamepad.cpp.hex to use.
+
+
+You can check both verbose output so you can copy avrdude command from Arduino.
+![verbose output](tutorial/upload_hex_1.png)
+
+Compile and upload any sketch to Leonardo. Find avrdude command in output.
+![Avrdude command](tutorial/upload_hex_2.png)
+
+Paste the command into terminal
+![Paste command](tutorial/upload_hex_3.png)
+
+Delete original hex file path
+![Remove hex](tutorial/upload_hex_4.png)
+
+Drag and drop new hex file into terminal
+![new file](tutorial/upload_hex_5.png)
+
+Now you can reset Leonardo and press enter to upload hex file
+![upload](tutorial/upload_hex_6.png)
+
+##Test Gamepad
 
 read more on http://deqingsun.github.io/Arduino_HID_frontendJS/
