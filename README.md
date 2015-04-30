@@ -24,10 +24,10 @@ You can either follow [NicoHood's tutorial](http://github.com/NicoHood/HID/wiki)
 Make sure you followed the [install guide](https://github.com/NicoHood/HID/wiki/Installation) and put HID in hardware folder of your sketch book.
 
 Make sure you chose "Arduino Leonardo HID-Project" in Board:
-![Arduino Leonardo HID-Project](tutorial/HID_library_board.png)
+![Arduino Leonardo HID-Project](http://github.com/DeqingSun/Arduino_HID_frontendJS/tutorial/HID_library_board.png)
 
 And "Serial + Gamepad HID" in USB Core:
-![Serial + Gamepad HID](tutorial/HID_library_core.png)
+![Serial + Gamepad HID](http://github.com/DeqingSun/Arduino_HID_frontendJS/tutorial/HID_library_core.png)
 
 Then you can open "sketch_forward_input_JS_gamepad/sketch_forward_input_JS_gamepad.ino" in this repo and upload it to your Leonardo. Also you can modify the code to add your own feature.
 
@@ -37,22 +37,22 @@ If you want to skip installing the library and only want to try it. There is a s
 
 
 You can check both verbose output so you can copy avrdude command from Arduino.
-![verbose output](tutorial/upload_hex_1.png)
+![verbose output](http://github.com/DeqingSun/Arduino_HID_frontendJS/tutorial/upload_hex_1.png)
 
 Compile and upload any sketch to Leonardo. Find avrdude command in output.
-![Avrdude command](tutorial/upload_hex_2.png)
+![Avrdude command](http://github.com/DeqingSun/Arduino_HID_frontendJS/tutorial/upload_hex_2.png)
 
 Paste the command into terminal
-![Paste command](tutorial/upload_hex_3.png)
+![Paste command](http://github.com/DeqingSun/Arduino_HID_frontendJS/tutorial/upload_hex_3.png)
 
 Delete original hex file path
-![Remove hex](tutorial/upload_hex_4.png)
+![Remove hex](http://github.com/DeqingSun/Arduino_HID_frontendJS/tutorial/upload_hex_4.png)
 
 Drag and drop new hex file into terminal
-![new file](tutorial/upload_hex_5.png)
+![new file](http://github.com/DeqingSun/Arduino_HID_frontendJS/tutorial/upload_hex_5.png)
 
 Now you can reset Leonardo and press enter to upload hex file
-![upload](tutorial/upload_hex_6.png)
+![upload](http://github.com/DeqingSun/Arduino_HID_frontendJS/tutorial/upload_hex_6.png)
 
 ##Test Gamepad
 
