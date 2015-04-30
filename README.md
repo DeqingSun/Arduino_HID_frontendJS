@@ -56,4 +56,10 @@ Now you can reset Leonardo and press enter to upload hex file
 
 ##Test Gamepad
 
+Now you should be able to see a functional gamepad. You can use "Game Controller" in control panel if you are using Windows.
+![gamepad](http://github.com/DeqingSun/Arduino_HID_frontendJS/tutorial/working_joystick.png)
+
+
+
+
 read more on http://deqingsun.github.io/Arduino_HID_frontendJS/
