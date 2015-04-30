@@ -1,0 +1,60 @@
+<head>
+  <title>Simple joystick example with Javascript</title>
+</head>
+
+
+<body>
+<p id="gamepad_status">GamePad Status</p>
+<p id="axis_status" style="font-family:monospace">Axis value</p>
+<p id="button_status" style="font-family:monospace">Button value</p>
+
+
+<script>
+var gamepad_status_element = document.getElementById("gamepad_status");
+var gamepad_axis_element = document.getElementById("axis_status");
+var gamepad_button_element = document.getElementById("button_status");
+var gamepadSupportAvailable = !!navigator.webkitGetGamepads || !!navigator.webkitGamepads || !!navigator.getGamepads;
+var gamepadConnected = false;
+var checkGamepads;
+
+function reportOnGamepad() {
+	var allGamepads = navigator.getGamepads();
+	if (allGamepads[0] != null){
+		var gamepad = allGamepads[0];
+		
+		buttonString="Button value:";
+		for(var i=0;(i<gamepad.buttons.length) && (i<16); i++) {
+            buttonString=buttonString + (gamepad.buttons[i].pressed?"P":"_");
+		}
+		gamepad_button_element.innerHTML = buttonString;
+		
+		axisString="Axis value";
+		for(var i=0;(i<gamepad.axes.length) && (i<6); i++) {
+			var valueString = gamepad.axes[i].toFixed(2);
+			var s = "___";
+            axisString=axisString + s.substring(valueString.length-s.length)+valueString;
+		}
+		gamepad_axis_element.innerHTML = axisString;
+	}
+}
+
+if (gamepadSupportAvailable){
+	gamepad_status_element.innerHTML = "Supports gamepad, insert one";
+	window.addEventListener("gamepadconnected", function(e) { //EventListener 
+		gamepadConnected = true;
+		gamepad_status_element.innerHTML = "Gamepad connected";
+		window.clearInterval(checkGamepads);
+		checkGamepads = window.setInterval(reportOnGamepad,50);
+	}, false);
+	window.addEventListener("gamepaddisconnected", function(e) {
+		gamepadConnected = false;
+		gamepad_status_element.innerHTML = "Gamepad disconnected";
+		window.clearInterval(checkGamepads);	
+	}, false);
+	
+}else{
+	gamepad_status_element.innerHTML = "Does not support gamepad";
+}
+</script>
+</body>
+</html>
