@@ -26,8 +26,10 @@ Make sure you followed the [install guide](https://github.com/NicoHood/HID/wiki/
 Make sure you chose "Arduino Leonardo HID-Project" in Board:
 ![Arduino Leonardo HID-Project](https://raw.githubusercontent.com/DeqingSun/Arduino_HID_frontendJS/master/tutorial/HID_library_board.png)
 
+
 And "Serial + Gamepad HID" in USB Core:
 ![Serial + Gamepad HID](https://raw.githubusercontent.com/DeqingSun/Arduino_HID_frontendJS/master/tutorial/HID_library_board.png)
+
 
 Then you can open "sketch_forward_input_JS_gamepad/sketch_forward_input_JS_gamepad.ino" in this repo and upload it to your Leonardo. Also you can modify the code to add your own feature.
 
@@ -37,28 +39,47 @@ If you want to skip installing the library and only want to try it. There is a s
 
 
 You can check both verbose output so you can copy avrdude command from Arduino.
+
 ![verbose output](https://raw.githubusercontent.com/DeqingSun/Arduino_HID_frontendJS/master/tutorial/upload_hex_1.png)
 
+
 Compile and upload any sketch to Leonardo. Find avrdude command in output.
+
 ![Avrdude command](https://raw.githubusercontent.com/DeqingSun/Arduino_HID_frontendJS/master/tutorial/upload_hex_2.png)
 
+
 Paste the command into terminal
+
 ![Paste command](https://raw.githubusercontent.com/DeqingSun/Arduino_HID_frontendJS/master/tutorial/upload_hex_3.png)
 
+
 Delete original hex file path
+
 ![Remove hex](https://raw.githubusercontent.com/DeqingSun/Arduino_HID_frontendJS/master/tutorial/upload_hex_4.png)
 
 Drag and drop new hex file into terminal
+
 ![new file](https://raw.githubusercontent.com/DeqingSun/Arduino_HID_frontendJS/master/tutorial/upload_hex_5.png)
 
+
 Now you can reset Leonardo and press enter to upload hex file
+
 ![upload](https://raw.githubusercontent.com/DeqingSun/Arduino_HID_frontendJS/master/tutorial/upload_hex_6.png)
+
 
 ##Test Gamepad
 
 Now you should be able to see a functional gamepad. You can use "Game Controller" in control panel if you are using Windows.
+
 ![gamepad](https://raw.githubusercontent.com/DeqingSun/Arduino_HID_frontendJS/master/tutorial/working_joystick.png)
 
+##Wiring
+
+I used a potentiometer to generate a analog value and buttons to generate digital ones. No pull-up resistor is needed because internal ones are enabled. Just connect buttons between IO and Ground.
+
+![photo](https://raw.githubusercontent.com/DeqingSun/Arduino_HID_frontendJS/master/test_circuit/Leonardo_test_circuit.jpg)
+
+![circuit](https://raw.githubusercontent.com/DeqingSun/Arduino_HID_frontendJS/master/test_circuit/Leonardo_test_circuit.png)
 
 
 
