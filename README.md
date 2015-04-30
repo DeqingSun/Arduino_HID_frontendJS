@@ -82,5 +82,16 @@ I used a potentiometer to generate a analog value and buttons to generate digita
 ![circuit](https://raw.githubusercontent.com/DeqingSun/Arduino_HID_frontendJS/master/test_circuit/Leonardo_test_circuit.png)
 
 
+##Connect it with Browser!
 
-read more on http://deqingsun.github.io/Arduino_HID_frontendJS/
+Firefox is recommended in this step. You can open http://www.html5rocks.com/en/tutorials/doodles/gamepad/ to test if gamepad is recognized.
+
+![rock](https://raw.githubusercontent.com/DeqingSun/Arduino_HID_frontendJS/master/tutorial/html5rockFirefox.png)
+
+
+If you want to write your own code, you can refer to simple.html in this repo.
+
+![simple](https://raw.githubusercontent.com/DeqingSun/Arduino_HID_frontendJS/master/tutorial/connectFirefox.png)
+
+
+
